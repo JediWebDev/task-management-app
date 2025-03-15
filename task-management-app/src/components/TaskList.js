@@ -28,7 +28,7 @@ export default function TaskList({ tasks, onDeleteTask, onToggleTask, onEditTask
     <DragDropContext onDragEnd={handleDragEnd}>
       <Droppable droppableId="tasks">
         {(provided) => (
-          <ul className="mt-4 space-y-2" {...provided.droppableProps} ref={provided.innerRef}>
+          <ul className="mt-4 space-y-2 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md" {...provided.droppableProps} ref={provided.innerRef}>
             {tasks.length === 0 ? (
               <p className="text-gray-500">No tasks added yet.</p>
             ) : (
