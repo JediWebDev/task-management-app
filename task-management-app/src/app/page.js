@@ -28,7 +28,7 @@ export default function Home() {
   const filteredTasks = tasks.filter((task) => {
     if (filter === "all") return !task.deleted;
     if (filter === "completed") return task.completed && !task.deleted;
-    if (filter === "deleted") return task.deleted;
+    if (filter === "incomplete") return !task.completed;
   });
 
   return (
