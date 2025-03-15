@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import TaskInput from "@/components/TaskInput";
 import TaskList from "@/components/TaskList";
 import TaskFilter from "@/components/TaskFilter";
-import useTaskStore from "@/store/taskStore";
 
 export default function HomePage() {
   const [tasks, setTasks] = useState([]);
