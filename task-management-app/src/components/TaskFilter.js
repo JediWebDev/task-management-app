@@ -16,10 +16,10 @@ export default function TaskFilter({ filter, setFilter }) {
         Completed
       </button>
       <button
-        className={`px-4 py-2 rounded ${filter === "deleted" ? "bg-blue-600 text-white" : "bg-gray-200"}`}
-        onClick={() => setFilter("deleted")}
+        className={`px-4 py-2 rounded ${filter === "incomplete" ? "bg-blue-600 text-white" : "bg-gray-200"}`}
+        onClick={() => setFilter("incomplete")}
       >
-        Deleted
+        Incomplete
       </button>
     </div>
   );
