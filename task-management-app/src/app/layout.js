@@ -21,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+      <body className="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
         <DarkModeToggle />
         <header className="bg-blue-600 dark:bg-blue-800 text-white py-4 px-6">
           <h1 className="text-2xl font-bold">Task Manager</h1>
