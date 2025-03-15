@@ -20,13 +20,7 @@ export default function TaskFilter({ filter, setFilter }) {
         onClick={() => setFilter("incomplete")}
       >
         Incomplete
-      </button>
-      {/* Add dark mode support to filter buttons */}
-    <button
-    className={`px-4 py-2 rounded ${
-      filter === "all" ? "bg-blue-600 text-white" : "bg-gray-200 dark:bg-gray-700 dark:text-white"
-    }`}
-   >Dark Mode</button>
+        </button>
     </div>
   );
 }
