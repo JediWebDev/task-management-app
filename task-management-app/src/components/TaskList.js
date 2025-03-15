@@ -39,7 +39,7 @@ export default function TaskList({ tasks, onDeleteTask, onToggleTask, onEditTask
                       ref={provided.innerRef}
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
-                      className="flex justify-between items-center p-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-700 shadow-md"
+                      className="flex justify-between items-center p-2 border rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-md"
                     >
                       {editingTaskId === task.id ? (
                         <input
