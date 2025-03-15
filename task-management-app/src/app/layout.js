@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           <h1 className="text-2xl font-bold">Task Manager</h1>
         </header>
         <Navbar />
-        <main className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md max-w-2xl mx-auto mt-6">
+        <main className="p-6 bg-gray-100 dark:bg-gray-900 min-h-screen">
           {children}
         </main>
       </body>
