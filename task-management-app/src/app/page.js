@@ -46,6 +46,14 @@ export default function HomePage() {
     );
   };
 
+  // ✅ Add missing reorder function
+  const reorderTasks = (startIndex, endIndex) => {
+    const updatedTasks = [...tasks];
+    const [movedTask] = updatedTasks.splice(startIndex, 1);
+    updatedTasks.splice(endIndex, 0, movedTask);
+    setTasks(updatedTasks);
+  };
+
   // Filter tasks based on the selected filter
   const filteredTasks = tasks.filter((task) => {
     if (filter === "all") return true;
@@ -62,6 +70,7 @@ export default function HomePage() {
         onDeleteTask={deleteTask}
         onToggleTask={toggleTaskCompletion}
         onEditTask={editTask}
+        onReorderTasks={reorderTasks} // ✅ Pass reorder function
       />
     </div>
   );
