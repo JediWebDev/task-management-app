@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TaskInput from "@/components/TaskInput";
 import TaskList from "@/components/TaskList";
 import TaskFilter from "@/components/TaskFilter";
@@ -8,6 +8,19 @@ import TaskFilter from "@/components/TaskFilter";
 export default function Home() {
   const [tasks, setTasks] = useState([]);
   const [filter, setFilter] = useState("all"); // Default to "all" tasks
+
+    // Load tasks from local storage on initial render
+    useEffect(() => {
+      const savedTasks = localStorage.getItem("tasks");
+      if (savedTasks) {
+        setTasks(JSON.parse(savedTasks));
+      }
+    }, []);
+  
+    // Save tasks to local storage whenever they change
+    useEffect(() => {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
 
   const addTask = (newTask) => {
     setTasks([...tasks, { id: Date.now(), text: newTask, completed: false }]);
