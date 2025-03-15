@@ -5,6 +5,13 @@
   --foreground: #171717;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*Set transition for smooth mode switching */
+html {
+  transition: background-color 0.3s, color 0.3s;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
