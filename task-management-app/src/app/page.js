@@ -3,9 +3,11 @@
 import { useState } from "react";
 import TaskInput from "@/components/TaskInput";
 import TaskList from "@/components/TaskList";
+import TaskFilter from "@/components/TaskFilter";
 
 export default function Home() {
   const [tasks, setTasks] = useState([]);
+  const [filter, setFilter] = useState("all"); // Default to "all" tasks
 
   const addTask = (newTask) => {
     setTasks([...tasks, { id: Date.now(), text: newTask, completed: false }]);
@@ -23,10 +25,21 @@ export default function Home() {
     );
   };
 
+  const filteredTasks = tasks.filter((task) => {
+    if (filter === "all") return !task.deleted;
+    if (filter === "completed") return task.completed && !task.deleted;
+    if (filter === "deleted") return task.deleted;
+  });
+
   return (
-    <div className="max-w-2xl mx-auto mt-6">
+    <div className='max-w-2xl mx-auto mt-6'>
       <TaskInput onAddTask={addTask} />
-      <TaskList tasks={tasks} onDeleteTask={deleteTask} onToggleTask={toggleTaskCompletion} />
+      <TaskFilter filter={filter} setFilter={setFilter} />
+      <TaskList
+        tasks={filteredTasks}
+        onDeleteTask={deleteTask}
+        onToggleTask={toggleTaskCompletion}
+      />
     </div>
   );
 }
