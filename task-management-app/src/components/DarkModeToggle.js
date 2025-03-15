@@ -6,7 +6,7 @@ export default function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check if user has a saved theme preference
+    // Check user's dark mode preference
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
       document.documentElement.classList.add("dark");
@@ -37,3 +37,4 @@ export default function DarkModeToggle() {
     </button>
   );
 }
+
