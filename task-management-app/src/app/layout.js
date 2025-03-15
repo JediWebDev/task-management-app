@@ -20,14 +20,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark:bg-gray-900">
       <body className="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
         <DarkModeToggle />
-        <header className="bg-blue-600 dark:bg-blue-800 text-white py-4 px-6">
+        <header className="bg-blue-600 dark:bg-gray-800 text-white py-4 px-6">
           <h1 className="text-2xl font-bold">Task Manager</h1>
         </header>
         <Navbar />
-        <main className="p-6">{children}</main>
+        <main className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md max-w-2xl mx-auto mt-6">
+          {children}
+        </main>
       </body>
     </html>
   );
