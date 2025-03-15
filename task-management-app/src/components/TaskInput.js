@@ -15,7 +15,7 @@ export default function TaskInput({ onAddTask }) {
     <div className="flex gap-2 mt-4">
       <input
         type="text"
-        className="border border-gray-300 p-2 rounded w-full"
+        className="border border-gray-300 dark:border-gray-600 p-2 rounded w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
         placeholder="Enter a task..."
         value={task}
         onChange={(e) => setTask(e.target.value)}
