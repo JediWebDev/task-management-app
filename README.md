@@ -7,7 +7,7 @@ This is a simple task management app created with Next.js, React and Tailwind. T
 ## Getting Started
 
 To try the demo out visit this link: https://task-management-app-two-plum.vercel.app/
-![app screenshot] (![public/ToDo%20App%20Screenshot.png])
+![app screenshot] (task-management-app/public/ToDo App Screenshot.png)
 
 To get started with the project in your local development environment, follow
 these steps:
