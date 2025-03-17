@@ -1,7 +1,13 @@
-# Introduction
+# Author
+Andrew Soria
+
+# Project Description
 This is a simple task management app created with Next.js, React and Tailwind. This project demonstrates simple CRUD actions such as adding, editing and deleting tasks. 
 
 ## Getting Started
+
+To try the demo out visit this link: https://task-management-app-two-plum.vercel.app/
+![app screenshot] (public/ToDo%20App%20Screenshot.png)
 
 To get started with the project in your local development environment, follow
 these steps:
@@ -28,3 +34,13 @@ npm run dev
 ```
 
 You are now ready to go!
+
+## Technologies Used
+1. Next.JS
+2. React
+3. TailwindCSS
+
+## Ideas For Future Improvement
+1. Add a clear all button to the task list component
+2. Add persistent state management for better performance
+3. Add due dates to tasks
